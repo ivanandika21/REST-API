@@ -55,3 +55,9 @@ var Mahasiswa = {
   }
 }
 ```
+
+## Membuat JSON
+Dalam membuat JSON akan selalu ada ```{ "key" : "value" }```
+**key** selalu dibungkus menggunakan petik ("key")
+**value** dapat diisi dengan berbagai macam tipe data: boolean, array, string, number, object (yang berisi ```{ "key" : "value" }``` lagi), dan null 
+> disingkat BASNON
