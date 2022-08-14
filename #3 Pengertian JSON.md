@@ -62,7 +62,8 @@ Dalam membuat JSON akan selalu ada ```{ "key" : "value" }```
 **value** dapat diisi dengan berbagai macam tipe data: boolean, array, string, number, object (yang berisi ```{ "key" : "value" }``` lagi), dan null 
 > disingkat BASNON
 
-## Membaca JSON di PHP
+# PHP
+## Sintaks penting untuk JSON di PHP
 Dari array menjadi JSON maka menggunakan fungsi ```json_encode()```
 Sedangkan dari JSON ke array menggunakan fungsi ```json_decode()```
 
@@ -75,3 +76,71 @@ $contents = utf8_encode($contents);
 // jika parameter kedua diisi dengan true maka mengubah string json menjadi array associative
 $result = json_decode($contents, true)
 ```
+## Mencoba JSON di PHP
+### json_encode()
+Proses **encode** dari array menjadi JSON:
+```
+<?php
+$mahasiswa = [
+    [
+        "nama"  => "Ivan Andika Surya",
+        "umur"  => 21,
+        "nim"   => "672019171"
+    ],
+    [
+        "nama"  => "Surya Andika Ivan",
+        "umur"  => 22,
+        "nim"   => "672019123"
+    ]
+];
+
+$data = json_encode($mahasiswa);
+echo($data);
+?>
+```
+Atau ambil dari database:
+```
+<?php
+$dbh = new PDO('mysql:host=localhost; dbname=phpdasar', 'root', 'root');
+$db = $dbh->prepare('SELECT * FROM mahasiswa');
+$db->execute();
+$mahasiswa = $db->fetchAll(PDO::FETCH_ASSOC);
+
+$data = json_encode($mahasiswa);
+echo($data);
+?>
+```
+### json_decode()
+Proses **decode** dari JSON menjadi array
+```
+<?php
+$contents = file_get_contents('coba.json');
+$result = json_decode($contents, true);
+
+var_dump($result);
+echo $result[0]["pembimbing"]["pembimbing1"];
+?>
+```
+
+# Javascript
+## Sintaks penting untuk JSON di PHP
+Dari object menjadi JSON maka menggunakan fungsi ```JSON.stringify()```
+Sedangkan dari JSON ke object menggunakan fungsi ```JSON.parse()```
+
+## Cara mengakses JSON dalam Javascript
+* ajax
++ XMLHttpRequest
++ JQuery
+
+### JSON.stringify()
+Mengubah object javascript menjadi JSON
+```
+var data = {
+  a : '1',
+  b : '2',
+  c : '3'
+}
+
+console.log(JSON.stringify(data));
+```
+
