@@ -41,3 +41,17 @@ Sedangkan jika menggunakan XML maka perlu menuliskan sebagai berikut:
 </fti>
 ```
 
+## Object Literal
+Ketika memmbuat object dalam Javascript misalnya:
+```
+var Mahasiswa = {
+  nama : "Ivan Andika Surya",
+  umur : 21,
+  nim : "672019171",
+  sapa : function() {
+         "Halo, nama saya " + this.nama +
+         " umur saya " + this.umur +
+         " tahun, dan nim saya adalah " + this.nim;
+  }
+}
+```
