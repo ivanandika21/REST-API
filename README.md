@@ -1,2 +1,2 @@
-# API
-Mempelajari tentang API
+# REST API (TANGGAL 16 MALAM HARUS UDAH KELAR YA IVAN!)
+Mempelajari tentang REST API
