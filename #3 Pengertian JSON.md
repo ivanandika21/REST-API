@@ -135,12 +135,33 @@ Sedangkan dari JSON ke object menggunakan fungsi ```JSON.parse()```
 ### JSON.stringify()
 Mengubah object javascript menjadi JSON
 ```
-var data = {
-  a : '1',
-  b : '2',
-  c : '3'
+let mahasiswa = {
+    nama : "Ivan Andika Surya",
+    nim : "672019171",
+    email : "ivanandikasurya21@gmail.com"
 }
 
-console.log(JSON.stringify(data));
+console.log(mahasiswa);
+console.log(JSON.stringify(mahasiswa));
 ```
 
+### JSON.parse()
+Menggunakan ajax, vanilla js, atau js murni
+```
+let xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        let mahasiswa = JSON.parse(this.responseText);
+        console.log(mahasiswa);
+    }
+}
+
+xhr.open('GET', 'coba.json', true);
+xhr.send();
+```
+Menggunakan JQuery:
+```
+$.getJSON('coba.json', function (data) {
+    console.log(data);
+})
+```
