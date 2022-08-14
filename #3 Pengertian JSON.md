@@ -61,3 +61,17 @@ Dalam membuat JSON akan selalu ada ```{ "key" : "value" }```
 **key** selalu dibungkus menggunakan petik ("key")
 **value** dapat diisi dengan berbagai macam tipe data: boolean, array, string, number, object (yang berisi ```{ "key" : "value" }``` lagi), dan null 
 > disingkat BASNON
+
+## Membaca JSON di PHP
+Dari array menjadi JSON maka menggunakan fungsi ```json_encode()```
+Sedangkan dari JSON ke array menggunakan fungsi ```json_decode()```
+
+## Mengakses JSON berupa file
+Menggunakan ```file_get_contents()```
+```
+$contents = file_get_contents('data.json');
+$contents = utf8_encode($contents);
+
+// jika parameter kedua diisi dengan true maka mengubah string json menjadi array associative
+$result = json_decode($contents, true)
+```
