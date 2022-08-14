@@ -12,3 +12,9 @@ API dapat digunakan pada banyak perangkat lunak misalnya :
 * Sistem Operasi
 * Web API atau sebagai Web Service
 * Dan masih banyak 
+
+## Jenis-jenis Arsitektur API
+API terbagi menjadi setidaknya tiga yaitu :
+* RPC (Remote Procedure Call)
+* SOAP (Simple Object Access Protocol)
+* REST (REpresentational State Transfer)
