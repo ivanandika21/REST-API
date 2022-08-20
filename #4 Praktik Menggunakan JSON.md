@@ -22,3 +22,6 @@ $.getJSON('data/menu.json', function(data){
   });
 });
 ```
+
+## Sebagai tambahan, WPU juga ngajarin tentang JQuery untuk membuat kategori menu
+https://youtu.be/UNjknizL2EI?t=1858
