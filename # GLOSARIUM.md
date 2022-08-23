@@ -14,4 +14,5 @@
   Header set Access-Control-Allow-Origin "*"
 </IfModule>
 ```
+* Public API : Sering juga disebut sebagai Open API, adalah API yang dapat diakses secara publik, yang didalamnya terdapat aturan untuk developer agar dapat mengakses data didalamnya.
 * 
