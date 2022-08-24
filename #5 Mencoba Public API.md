@@ -15,9 +15,22 @@
     },
     success: function(result) {
       if(result.Response == "True"){
+        let movies = result.Search;
         
+        $.each(movies, function(i, data){
+          // buat card disini
+          $('#movie-list').append(`
+          <p>` + data.Poster + `</p>
+          <p>` + data.Title + `</p>
+          <p>` + data.Year + `</p>
+          `);
+        });
       } else {
-        $('#movie-list').html('<h1 class="text-center">' + result.Error + '</h1>')
+        $('#movie-list').html(`
+        <div class="col">
+          <h1 class="text-center">` + result.Error + `</h1>
+        </div>  
+        `)
       }
     }
   });
