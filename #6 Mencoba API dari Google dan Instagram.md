@@ -13,4 +13,4 @@ Untuk mengakses Google API dapat dilakukan dengan langkah-langkah berikut:
 ## Instagram API
 Untuk mengakses Instagram API dapat dilakukan dengan langkah-langkah berikut:
 * Masuk ke https://www.instagram.com/developer/
-* 
+* Klik `Register a New Client`
