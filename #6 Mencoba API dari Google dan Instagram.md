@@ -9,4 +9,8 @@ Untuk mengakses Google API dapat dilakukan dengan langkah-langkah berikut:
 * Cari YouTube > Klik > Enable
 * Membuat API Key : masuk ke Credentials > Pilih API yang sudah di enable tadi
 * Klik `What credentials do i need?` > Salin API Key
+
+## Instagram API
+Untuk mengakses Instagram API dapat dilakukan dengan langkah-langkah berikut:
+* Masuk ke https://www.instagram.com/developer/
 * 
