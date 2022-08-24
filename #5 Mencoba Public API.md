@@ -4,7 +4,10 @@
 
 ## Buat script menggunakan Javascript
 ```
-#('#search-button').on('click', function() {
+function searchMovie() {
+  // tambahan untuk mengosongkan movie list saat search dilakukan lebih dari 1 kali
+  $('#movie-list').html('');
+  
   $.ajax({
     url: 'http://omdbapi.com',
     type: 'get',
@@ -25,6 +28,9 @@
           <p>` + data.Year + `</p>
           `);
         });
+        
+        // tambahan untuk mengosongkan search input saat ada result
+        $('#search-input').val('');
       } else {
         $('#movie-list').html(`
         <div class="col">
@@ -34,5 +40,21 @@
       }
     }
   });
+}
+```
+
+## Panggil fungsi searchMovie()
+```
+#('#search-button').on('click', function() {
+  searchMovie();
+});
+```
+
+## Agar saat menekan enter dapat melakukan search
+```
+$('#search-input').on('keyup', function(e){
+  if(e.keyCode === 13){
+    searchMovie()
+  }
 });
 ```
