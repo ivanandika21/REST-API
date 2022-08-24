@@ -1,2 +1,2 @@
-# REST API (TANGGAL 16 MALAM HARUS UDAH KELAR YA IVAN!)
-Mempelajari tentang REST API
+# REST API
+Mempelajari tentang REST API berdasarkan video pembelajaran dari Web Programming Unpas (WPU)
