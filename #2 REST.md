@@ -19,3 +19,7 @@ Dengan menggunakan RESTful maka sekarang harus menggunakan HTTP method yang sesu
 
 ## Stateless
 Ketiadaan sebuah state dalam sebuah aplikasi. Setiap request HTTP akan dilakukan secara terisolasi. Server tidak boleh menyimpan state apapun mengenai sesi dari client. Setiap request yang dikirimkan oleh client harus berisi semua informasi yang diminta oleh server, termasuk kemungkinan juga informasi mengenai otentikasi.
+Antara satu halaman dengan halaman lain tidak saling berhubungan mengenai data yang dibawa. Misalnya dapat menggunakan cookies, session, atau cara passing variabel lainnya.
+
+## REST
+Bisa mengirimkan sebuah program yang executeable (Code on Demand)
